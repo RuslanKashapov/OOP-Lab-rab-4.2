@@ -48,6 +48,22 @@ namespace OOP_Lab_rab_4._2
             textBox2.Text = model.getValue2().ToString();
             label2.Text = model.getValue2().ToString();
         }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                model.setValue1(Convert.ToInt32(textBox1.Text));
+            }
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                model.setValue2(Convert.ToInt32(textBox2.Text));
+            }
+        }
     }
 
     public class Model
